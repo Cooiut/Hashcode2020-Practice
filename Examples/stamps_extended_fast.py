@@ -44,11 +44,14 @@ def smns(amount: int, denom: (int)) -> [int]:
 
 
 if __name__ == '__main__':
-    denominations = (1, 6, 14, 57)
+    # denominations = (1, 6, 14, 57)
+    denominations = (1, 2, 5, 6, 8)
     amount = prompt.for_int('Enter amount', is_legal=lambda x: x >= 0)
+    print(amount)
+    print(denominations)
     print('stamps needed   = ', smns(amount, denominations))
 
     # Table of smallest number of stamps needed for each amount of possage
-    for i in irange(1, 100):
+    for i in irange(1, 1000):
         print('For postage =', i, 'stamps needed =', smns(i, denominations))
     print()
